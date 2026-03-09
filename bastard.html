@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bastard - Tyler, The Creator</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        :root {
+            --bastard-red: #b30000;
+            --bastard-dark: #1a1a1a;
+            --bastard-gray: #333333;
+            --bastard-light-gray: #d1d1d1;
+        }
+
+        body {
+            /* Fondo gris cemento con textura de grano (opcional con CSS) */
+            background-color: #bcbcbc;
+            background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png"); 
+            color: var(--bastard-dark);
+            font-family: 'Courier New', Courier, monospace; /* Estética de máquina de escribir */
+        }
+
+        /* Navbar estilo oscuro y minimalista */
+        .navbar {
+            background-color: var(--bastard-dark) !important;
+            border-bottom: 3px solid var(--bastard-red);
+        }
+
+        /* Títulos */
+        .album-title {
+            font-size: 5rem;
+            font-weight: 900;
+            color: var(--bastard-red);
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+        }
+
+        /* Contenedores con overlay estilo expediente */
+        section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(2px);
+        }
+
+        /* Estilo de lista de canciones (Tracklist) */
+        .list-group-item {
+            background-color: rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            color: var(--bastard-dark);
+            transition: all 0.3s;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .list-group-item:hover {
+            background-color: var(--bastard-red);
+            color: white;
+            transform: translateX(10px);
+        }
+
+        /* Botón de reproducción personalizado */
+        .btn-bastard {
+            background-color: var(--bastard-dark);
+            color: white;
+            border: none;
+            border-radius: 0;
+            padding: 10px 25px;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-bastard:hover {
+            background-color: var(--bastard-red);
+            color: white;
+        }
+
+        /* Imagen del álbum con efecto de foto vieja */
+        .album-img {
+            filter: grayscale(20%) contrast(110%);
+            border: 10px solid white;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+        }
+
+        footer {
+            background-color: var(--bastard-dark);
+            color: var(--bastard-light-gray);
+            border-top: 5px solid var(--bastard-red);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="index.html" style="color: var(--bastard-red); font-weight: 900;">TYLER.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#discografia">Discografía</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <img src="img/bastard.jfif" alt="Bastard Album" class="img-fluid album-img">
+                </div>
+                <div class="col-md-8">
+                    <h1 class="album-title">BASTARD(no me gusta)</h1>
+                    <p style="font-size: 1.5rem; font-weight: bold; color: var(--bastard-gray);">[2009 - DEBUT MIXTAPE]</p>
+                    
+                    <div class="mt-4 p-3" style="border-left: 5px solid var(--bastard-red); background: rgba(0,0,0,0.05);">
+                        <p><strong>Productora:</strong> Odd Future Records</p>
+                        <p><strong>Estado:</strong> Underground / Cult Classic</p>
+                    </div>
+
+                    <p class="mt-4" style="line-height: 1.6;">Bastard fue el primer mixtape de Tyler, The Creator y marcó el comienzo de su carrera musical. El proyecto presentó la estética cruda, oscura y experimental que definiría el sonido inicial de Odd Future. Grabado en su habitación, este álbum es un viaje psicológico a través de la mente de un joven de 18 años.</p>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-md-8">
+                    <h3 style="color: var(--bastard-red); font-weight: 900; text-transform: uppercase;">Tracklist / Expediente</h3>
+                    <div class="list-group mt-3">
+                        <div class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>1. Bastard</span>
+                            <button onclick="controlarAudio('Bastard/Bastard.mp3', this)" class="btn btn-sm btn-bastard">PLAY</button>
+                        </div>
+                        <div class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>2. Seven</span>
+                            <button onclick="controlarAudio('Bastard/Seven.mp3', this)" class="btn btn-sm btn-bastard">PLAY</button>
+                        </div>
+                        <div class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>3. Odd Toddlers</span>
+                            <button onclick="controlarAudio('Bastard/Odd_Toddlers.mp3', this)" class="btn btn-sm btn-bastard">PLAY</button>
+                        </div>
+                        <div class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>4. French!</span>
+                            <button onclick="controlarAudio('Bastard/French.mp3', this)" class="btn btn-sm btn-bastard">PLAY</button>
+                        </div>
+                        <div class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>5. Blow</span>
+                            <button onclick="controlarAudio('Bastard/Blow.mp3', this)" class="btn btn-sm btn-bastard">PLAY</button>
+                        </div>
+                        <div class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>6. Pigs Fly (feat. Domo Genesis)</span>
+                            <button onclick="controlarAudio('Bastard/Pigs_Fly.mp3', this)" class="btn btn-sm btn-bastard">PLAY</button>
+                        </div>
+                        
+                        <div class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>7. Parade</span>
+                            <button onclick="controlarAudio('Bastard/Parade.mp3', this)" class="btn btn-sm btn-bastard">PLAY</button>
+                        </div>
+
+                        <div class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>8. Slow it down</span>
+                            <button onclick="controlarAudio('Bastard/Slow_it_down.mp3', this)" class="btn btn-sm btn-bastard">PLAY</button>
+                        </div>
+
+                        <div class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>9. Ass Milk</span>
+                            <button onclick="controlarAudio('Bastard/Ass_Milk.mp3', this)" class="btn btn-sm btn-bastard">PLAY</button>
+                        </div>
+
+                        <div class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>10. VCR Wheels</span>
+                            <button onclick="controlarAudio('Bastard/VCR_Wheels.mp3', this)" class="btn btn-sm btn-bastard">PLAY</button>
+                        </div>
+
+                        <div class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>11. Session</span>
+                            <button onclick="controlarAudio('Bastard/Session.mp3', this)" class="btn btn-sm btn-bastard">PLAY</button>
+                        </div>
+                        
+                        <div class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>12. Sarah</span>
+                            <button onclick="controlarAudio('Bastard/Sarah.mp3', this)" class="btn btn-sm btn-bastard">PLAY</button>
+                        </div>
+
+                        <div class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>13. Jack and the Beanstalk</span>
+                            <button onclick="controlarAudio('Bastard/Jack_and_the_Beanstalk.mp3', this)" class="btn btn-sm btn-bastard">PLAY</button>
+                        </div>
+
+                        <div class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>14. Tina</span>
+                            <button onclick="controlarAudio('Bastard/Tina.mp3', this)" class="btn btn-sm btn-bastard">PLAY</button>
+                        </div>
+
+                        <div class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>15. Inglorious</span>
+                            <button onclick="controlarAudio('Bastard/Inglorious.mp3', this)" class="btn btn-sm btn-bastard">PLAY</button>
+                        </div>
+
+                        <div class="list- group-item d-flex justify-content-between align-items-center">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12">
+                    <a href="index.html#discografia" class="btn btn-bastard btn-lg">
+                        <i class="bi bi-arrow-left"></i> Volver a Discografía
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-5 mt-5">
+        <div class="container text-center">
+            <p class="mb-1">&copy; 2026 Tyler, The Creator / Odd Future Records</p>
+            <p class="small text-muted">Creado por Luis Enrique Fernández Leyva</p>
+        </div>
+    </footer>
+
+    <audio id="reproductor"></audio>
+
+    <script>
+        const audio = document.getElementById('reproductor');
+        let btnActivo = null;
+
+        function controlarAudio(ruta, btn) {
+            if (audio.src.includes(ruta)) {
+                if (audio.paused) { audio.play(); btn.innerHTML = "PAUSE"; } 
+                else { audio.pause(); btn.innerHTML = "PLAY"; }
+            } else {
+                if (btnActivo) btnActivo.innerHTML = "PLAY";
+                audio.src = ruta;
+                audio.play();
+                btnActivo = btn;
+                btn.innerHTML = "PAUSE";
+            }
+            audio.onended = () => btn.innerHTML = "PLAY";
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

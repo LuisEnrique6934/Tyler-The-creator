@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IGOR - Tyler, The Creator</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        :root {
+            --igor-pink: #f4a7c5;
+            --igor-dark: #121212;
+            --igor-text: #000000;
+        }
+
+        body {
+            background-color: var(--igor-pink);
+            color: var(--igor-text);
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: var(--igor-dark) !important;
+            border-bottom: 3px solid white;
+        }
+
+        .navbar-brand, .nav-link {
+            color: white !important;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* Tarjeta Desplegable */
+        .igor-card {
+            background-color: var(--igor-dark);
+            color: white;
+            padding: 40px;
+            border: 5px solid white;
+            box-shadow: 15px 15px 0px rgba(0,0,0,0.2);
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .igor-card:hover {
+            transform: scale(1.02);
+        }
+
+        .igor-title {
+            font-size: 5rem;
+            font-weight: 900;
+            letter-spacing: -3px;
+            line-height: 0.8;
+            margin-bottom: 20px;
+        }
+
+        .tracklist-container {
+            background: white;
+            padding: 30px;
+            border: 4px solid var(--igor-dark);
+        }
+
+        /* Estilo para los botones de la lista */
+        .btn-igor {
+            background-color: var(--igor-dark);
+            color: white;
+            border-radius: 0;
+            border: none;
+            font-weight: bold;
+            padding: 5px 20px;
+            margin-top: 10px;
+        }
+
+        /* Quitar el borde azul y sombras por defecto del accordion de bootstrap */
+        .accordion-button:focus {
+            box-shadow: none;
+            border-color: rgba(0,0,0,.125);
+        }
+        
+        .accordion-button:not(.collapsed) {
+            color: var(--igor-dark);
+            background-color: #fce4ec;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="index.html">TYLER, THE CREATOR</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#discografia">Discografía</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 mb-5">
+                    <div class="igor-card" data-bs-toggle="collapse" data-bs-target="#infoExtra">
+                        <img src="img/Igor.webp" alt="IGOR Cover" class="img-fluid mb-4" style="border: 3px solid white;">
+                        <h2 class="igor-title">IGOR</h2>
+                        <p class="h4">2019</p>
+                        <small>(Clic para más detalles)</small>
+                    </div>
+                    
+                    <div class="collapse mt-3" id="infoExtra">
+                        <div class="card card-body bg-dark text-white border-white border-3" style="border-radius: 0;">
+                            <ul class="list-unstyled mb-0">
+                                <li><strong>Género:</strong> Funk, Synth-pop, R&B</li>
+                                <li><strong>Duración:</strong> 39:03</li>
+                                <li><strong>Discográfica:</strong> Columbia Records</li>
+                                <hr class="bg-white">
+                                <li class="small italic">"Este álbum no es Wolf. No es Cherry Bomb. No es Flower Boy. Este es IGOR. No entres esperando un álbum de rap."</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-7">
+                    <div class="album-info mb-4 border-start border-dark border-5 ps-4">
+                        <p><strong>Lanzamiento:</strong> 17 de mayo de 2019</p>
+                        <p><strong>Productor:</strong> Tyler, The Creator</p>
+                        <p>IGOR narra el ciclo de un enamoramiento obsesivo hasta la aceptación. Es un viaje sonoro multimedia que explora temas de identidad y transformación.</p>
+                    </div>
+
+                    <div class="tracklist-container">
+                        <h3 class="mb-4 text-center fw-bold">TRACKLIST & DETAILS</h3>
+                        <div class="accordion accordion-flush" id="tracklistAccordion">
+                            
+                            <div class="accordion-item bg-transparent">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed bg-transparent fw-bold text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#collapse01">
+                                        01. IGOR'S THEME
+                                    </button>
+                                </h2>
+                                <div id="collapse01" class="accordion-collapse collapse" data-bs-parent="#tracklistAccordion">
+                                    <div class="accordion-body">
+                                        <p class="small text-muted">Funciona como introduccion a la historia que nos trata de contar tyler en todo el album, esta es el tema de nuestro personaje IGOR un uso de sintetizadores y vocales de Lil Uzi repitiendo "he's coming" o "Riding around town the gonna feel this one"                                        </p>
+                                        <button onclick="controlarAudio('Igor/IGOR\'S THEME.MP3', this)" class="btn btn-igor">PLAY</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item bg-transparent">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed bg-transparent fw-bold text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#collapse02">
+                                        02. EARFQUAKE
+                                    </button>
+                                </h2>
+                                <div id="collapse02" class="accordion-collapse collapse" data-bs-parent="#tracklistAccordion">
+                                    <div class="accordion-body">
+                                        <p class="small text-muted">El mayor hit. Incluye a Playboi Carti. Habla sobre la dependencia emocional una muy fuerte al punto de rogar que no se vaya pues es nuestra culpa. Y la necesidad de respuestas tambien el como la otra persona no quiere tener esa conversacion evadiendolo
+                                        </p>
+                                        <button onclick="controlarAudio('Igor/EARFQUAKE.MP3', this)" class="btn btn-igor">PLAY</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item bg-transparent">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed bg-transparent fw-bold text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#collapse03">
+                                        03. I THINK
+                                    </button>
+                                </h2>
+                                <div id="collapse03" class="accordion-collapse collapse" data-bs-parent="#tracklistAccordion">
+                                    <div class="accordion-body">
+                                        <p class="small text-muted">Tyler se questiona tanto su estado mental como sus sentimientos, a su vez de como el cree que lo que siente es amor pero talvez sea solo la curiosidad por las acciones que realiza la otra persona</p>
+                                        <button onclick="controlarAudio('Igor/I THINK.MP3', this)" class="btn btn-igor">PLAY</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item bg-transparent">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed bg-transparent fw-bold text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#collapse04">
+                                        04. EXACTLY WHAT YOU RUN FROM YOU END UP CHASING
+                                    </button>
+                                </h2>
+                                <div id="collapse04" class="accordion-collapse collapse" data-bs-parent="#tracklistAccordion">
+                                    <div class="accordion-body">
+                                        <p class="small text-muted">Un pequeño interludio se traduce como "Exactamente de lo que estas huyendo es lo que terminas persiguiendo", haciendo alucion a las posibles tendencias ciclicas que tiene nuestro personaje conforme a sus relaciones</p>
+                                        <button onclick="controlarAudio('Igor/EXACTLY WHAT YOU RUN FROM YOU END UP CHASING.MP3', this)" class="btn btn-igor">PLAY</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item bg-transparent">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed bg-transparent fw-bold text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#collapse05">
+                                        05. RUNNING OUT OF TIME
+                                    </button>
+                                </h2>
+                                <div id="collapse05" class="accordion-collapse collapse" data-bs-parent="#tracklistAccordion">
+                                    <div class="accordion-body">
+                                        <p class="small text-muted">Ya lo intentamos todo, se acaba el tiempo y sentimos que nos ahogamos al no poder hacer que esa persona nos ame, pero talvez el no lo quiere aceptar.</p>
+                                        <button onclick="controlarAudio('Igor/RUNNING OUT OF TIME.MP3', this)" class="btn btn-igor">PLAY</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item bg-transparent">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed bg-transparent fw-bold text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#collapse06">
+                                        06. NEW MAGIC WAND
+                                    </button>
+                                </h2>
+                                <div id="collapse06" class="accordion-collapse collapse" data-bs-parent="#tracklistAccordion">
+                                    <div class="accordion-body">
+                                        <p class="small text-muted">A diferencia de la cancion anterior esta tiene un ritmo mas agresivo mostrando la obsecion que siente por esta persona, hay un tercero en la relacion y tendremos que hacer uso de la nueva varita magica(un arma) para ponerlo entre las cuerdas y escoga entre los 2
+                                            Esto no es amor, es una obsecion.
+                                        </p>
+                                        <button onclick="controlarAudio('Igor/NEW MAGIC WAND.MP3', this)" class="btn btn-igor">PLAY</button>
+                                    </div>
+                                </div>  
+                            </div>
+                            
+                            <div class="accordion-item bg-transparent">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed bg-transparent fw-bold text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#collapse07">
+                                        07. A BOY IS A GUN 
+                                    </button>
+                                </h2>
+                                <div id="collapse07" class="accordion-collapse collapse" data-bs-parent="#tracklistAccordion">
+                                    <div class="accordion-body">
+                                        <p class="small text-muted">Aqui se rompe la obsecion y "abrimos los ojos" alejandonos de esa persona que es tan peligrosa como un arma cargada, pero en partes se vuelve vulnerable pidiendo que no se vaya o el como el esta aqui para la otra persona.</p>
+                                        <button onclick="controlarAudio('Igor/A BOY IS A GUN.MP3', this)" class="btn btn-igor">PLAY</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item bg-transparent">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed bg-transparent fw-bold text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#collapse08">
+                                        08. PUPPET
+                                    </button>
+                                </h2>
+                                <div id="collapse08" class="accordion-collapse collapse" data-bs-parent="#tracklistAccordion">
+                                    <div class="accordion-body">
+                                        <p class="small text-muted">La cancion que muestra que tan vulnerable y el como estaba a la voluntad de la otra persona dispuesta a hacer cualquier cosa que sea necesaria para que se quede pero en cierta manera dandose cuenta en que nunca hubo una voluntad propia todo fue impulsado por esa obsecion, con la participacion de kanye que actua como una voz interior
+                                            para al final volver a nuestros sentidos.
+                                        </p>
+                                        <button onclick="controlarAudio('Igor/PUPPET.MP3', this)" class="btn btn-igor">PLAY</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item bg-transparent">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed bg-transparent fw-bold text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#collapse09">
+                                        09. WHAT'S GOOD
+                                    </button>
+                                </h2>
+                                <div id="collapse09" class="accordion-collapse collapse" data-bs-parent="#tracklistAccordion">
+                                    <div class="accordion-body">
+                                        <p class="small text-muted">En lo personal mi favorita junto a gone gone/ thank you; Esta cancion es basicamente un levanton al ego de tyler ya no somos la marioneta de la persona 
+                                            ahora cuando pregunten nuestro nombre es  IGOR, se repite mucho la frase "I see the light" mostrando el como ya abrio los ojos por eso se siente tan frenetica es basicamente una explosion para
+                                            no mostrar la vulnerabilidad, Al final nos pregunta que es mas dificil dejar ir o aceptar las cosas como son.
+                                        </p>
+                                        <button onclick="controlarAudio('Igor/WHAT\'S GOOD.MP3', this)" class="btn btn-igor">PLAY</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item bg-transparent">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed bg-transparent fw-bold text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10">
+                                        10. GONE, GONE / THANK YOU
+                                    </button>
+                                </h2>
+                                <div id="collapse10" class="accordion-collapse collapse" data-bs-parent="#tracklistAccordion">
+                                    <div class="accordion-body">
+                                        <p class="small text-muted">Mi otra cancion preferida del album, en GONE GONE tyler repite constantemente el como el amor ya se fue y de eso trata ya se termino todo aunque quedamos marcados y reconoce el como el se confundio talvez las señales no significaban lo mismo para ambos.
+                                            En THANK YOU funciona como un agradecimiento por el tiempo, el amor y la felicidad que se le dio, todo termino bien no?
+                                        </p>
+                                        <button onclick="controlarAudio('Igor/GONE, GONE  THANK YOU.MP3', this)" class="btn btn-igor">PLAY</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item bg-transparent">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed bg-transparent fw-bold text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11">
+                                        11. I DONT LOVE YOU ANYMORE
+                                    </button>
+                                </h2>
+                                <div id="collapse11" class="accordion-collapse collapse" data-bs-parent="#tracklistAccordion">
+                                    <div class="accordion-body">
+                                        <p class="small text-muted">A pesar de tyler mostrar que ya no le afecta la perdida por la otra persona y el como ya lo supero solo es una mentira para si mismo para no mostrar que tan herido esta 
+                                            por lo sucedido, en la letra el pide saber a donde ir o si puede tener su corazon devuelta mostrando que no lo a superado aun a pesar de en las ultimas 2 canciones aparentar que si.
+                                        </p>
+                                        <button onclick="controlarAudio('Igor/I DON\'T LOVE YOU ANYMORE.MP3', this)" class="btn btn-igor">PLAY</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item bg-transparent">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed bg-transparent fw-bold text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#collapse12">
+                                        12. ARE WE STILL FRIENDS?
+                                    </button>
+                                </h2>
+                                <div id="collapse12" class="accordion-collapse collapse" data-bs-parent="#tracklistAccordion">
+                                    <div class="accordion-body">
+                                        <p class="small text-muted">Tyler no lo a superado aun persigue el amor de esa persona, aun quiere estar a su lado talvez ya no como amantes si no como amigos 
+                                            pero eso es porque el no puede dejar ir eso lo conecta con la cancion EXACTLY WHAT YOU RUN FROM YOU END UP CHASING volviendo esto un ciclo que no beneficia a 
+                                            ninguno y tyler es el unico herido...
+                                        </p>
+                                        <button onclick="controlarAudio('Igor/ARE WE STILL FRIENDS.MP3', this)" class="btn btn-igor">PLAY</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="index.html#discografia" class="btn btn-dark btn-lg px-5 py-3" style="border-radius: 0;">VOLVER</a>
+            </div>
+        </div>
+    </section>
+
+    <audio id="reproductor"></audio>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const audio = document.getElementById('reproductor');
+        let btnActivo = null;
+
+        function controlarAudio(ruta, btn) {
+            if (audio.src.includes(ruta)) {
+                if (audio.paused) { audio.play(); btn.innerHTML = "PAUSE"; } 
+                else { audio.pause(); btn.innerHTML = "PLAY"; }
+            } else {
+                if (btnActivo) btnActivo.innerHTML = "PLAY";
+                audio.src = ruta;
+                audio.play();
+                btnActivo = btn;
+                btn.innerHTML = "PAUSE";
+            }
+            audio.onended = () => btn.innerHTML = "PLAY";
+        }
+    </script>
+</body>
+</html>

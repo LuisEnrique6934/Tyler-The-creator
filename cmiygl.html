@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMIYGL: The Estate Sale</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        :root {
+            --cmiygl-blue: #a3d5e0; 
+            --cmiygl-cream: #fdf5e6; 
+            --cmiygl-brown: #5d4037; 
+            --cmiygl-gold: #d4af37;
+            --estate-green: #3d5a45;
+        }
+
+        body {
+            background-color: var(--cmiygl-cream);
+            color: var(--cmiygl-brown);
+            font-family: 'Georgia', serif;
+        }
+
+        .navbar {
+            background-color: var(--cmiygl-brown) !important;
+            border-bottom: 4px solid var(--cmiygl-gold);
+        }
+
+        .navbar-brand {
+            color: var(--cmiygl-cream) !important;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-decoration: none;
+        }
+
+        /* Estilo de la Tarjeta */
+        .passport-card {
+            background-color: var(--cmiygl-blue);
+            padding: 25px;
+            border: 2px solid var(--cmiygl-brown);
+            box-shadow: 12px 12px 0px var(--cmiygl-brown);
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-family: 'Times New Roman', serif;
+            font-weight: 900;
+            text-transform: uppercase;
+            border-bottom: 3px solid var(--estate-green);
+            margin-bottom: 25px;
+        }
+
+        /* Listado de Canciones */
+        .track-list-container {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 20px;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .track-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 15px;
+            border-bottom: 1px dashed #ccc;
+            font-size: 0.95rem;
+            text-decoration: none; /* Quitar subrayado de enlace */
+            color: var(--cmiygl-brown);
+            transition: all 0.2s ease;
+        }
+
+        .track-item:hover {
+            background-color: var(--cmiygl-blue);
+            color: white;
+            padding-left: 25px; /* Efecto de desplazamiento */
+        }
+
+        .estate-sale-header {
+            background-color: var(--estate-green);
+            color: var(--cmiygl-cream);
+            padding: 10px;
+            margin-top: 20px;
+            text-align: center;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .btn-travel {
+            background-color: var(--estate-green);
+            color: white;
+            border-radius: 0;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .btn-travel:hover {
+            background-color: var(--cmiygl-brown);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-md sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="index.html">TYLER BAUDELAIRE</a>
+        </div>
+    </nav>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="passport-card">
+                        <h5 class="text-center mb-3">PASSPORT / ID</h5>
+                        <img src="img/CMIYGL.jpg" alt="Estate Sale" class="img-fluid border border-white shadow mb-3">
+                        <p class="small mb-1"><strong>NOMBRE:</strong> TYLER BAUDELAIRE</p>
+                        <p class="small mb-1"><strong>ASUNTO:</strong> THE ESTATE SALE (2023)</p>
+                        <p class="small"><strong>ESTATUS:</strong> EXTENDIDO</p>
+                        <i class="bi bi-airplane h1 d-block text-center mt-3"></i>
+                    </div>
+                    <a href="index.html#discografia" class="btn btn-travel w-100 py-3 text-decoration-none text-center">Volver a Discografía</a>
+                </div>
+
+                <div class="col-md-8">
+                    <h1 class="section-title">Call Me If You Get Lost: The Estate Sale</h1>
+                    <p>Originalmente lanzado en 2021 tuvo una expancion con The State Sale,este album funciona como un show de los lujos que puede darse tyler pero en algunas canciones nos cuenta una historia de amor que no termino bien.</p>
+                    
+                    <div class="track-list-container">
+                        <h5 class="fw-bold mb-3"><i class="bi bi-play-circle-fill"></i> Select a Destination (Tracklist)</h5>
+                        
+                        <a href="https://music.youtube.com/watch?v=aktRqdBmrf4&si=-vWbid5A9KIsm37d" target="_blank" class="track-item"><span>01. SIR BAUDELAIRE</span> <small>1:28</small></a>
+                        <a href="https://music.youtube.com/watch?v=qz-k3DoMxkw&si=hAHI-_4cjJu7qn8R  " target="_blank" class="track-item"><span>02. CORSO</span> <small>2:26</small></a>
+                        <a href="https://music.youtube.com/watch?v=QjckqsLmb1o&si=kDhjdwzZQDF7Rr7R" target="_blank" class="track-item"><span>03. LEMONHEAD</span> <small>2:10</small></a>
+                        <a href="https://music.youtube.com/watch?v=WD-kOAeAcTY&si=rUmgJxIt1_SsGtP9" target="_blank" class="track-item"><span>04. WUSYANAME</span> <small>2:01</small></a>
+                        <a href="https://music.youtube.com/watch?v=-7DRsw7_i34&si=hlGdZVcaWZL3Q8Dv" target="_blank" class="track-item"><span>05. LUMBERJACK</span> <small>2:18</small></a>
+                        <a href="https://music.youtube.com/watch?v=t4MR7Ilg5dc&si=jkOwYjkhgM94_d6q" target="_blank" class="track-item"><span>06. HOT WIND BLOWS</span> <small>2:35</small></a>
+                        <a href="https://music.youtube.com/watch?v=_U5xtAaHRuU&si=OBWbIRxpv6rllIVM" target="_blank" class="track-item"><span>07. MASSA</span> <small>3:43</small></a>
+                        <a href="https://music.youtube.com/watch?v=3AA7ybax90w&si=Dl1feYgfs9SPTPDU" target="_blank" class="track-item"><span>08. RUNITUP</span> <small>3:49</small></a>
+                        <a href="https://music.youtube.com/watch?v=0W4-_52gMbE&si=BLPsYDjqmsXyO_Sy" target="_blank" class="track-item"><span>09. MANIFESTO</span> <small>2:55</small></a>
+                        <a href="https://music.youtube.com/watch?v=oCEaYar1RgU&si=qUw_cPkXZr1KlI2R" target="_blank" class="track-item"><span>10. SWEET / I THOUGHT YOU WANTED TO DANCE</span> <small>9:48</small></a>
+                        <a href="https://music.youtube.com/watch?v=UMA6WlsJEbo&si=-KhLZfpnhywEgs9R" target="_blank" class="track-item"><span>11. MOMMA TALK</span> <small>1:10</small></a>
+                        <a href="https://music.youtube.com/watch?v=kZrvZYoXbP4&si=iKrlP_FsHLfS4T1O" target="_blank" class="track-item"><span>12. RISE!</span> <small>3:23</small></a>
+                        <a href="https://music.youtube.com/watch?v=6gvmT2JhYnc&si=hpNeCxMpZ23VBYWd" target="_blank" class="track-item"><span>13. BLESSED</span> <small>0:57</small></a>
+                        <a href="https://music.youtube.com/watch?v=pmkYOjJ7qSg&si=fOoRxXFv6tjnxU5x" target="_blank" class="track-item"><span>14. JUGGERNAUT</span> <small>2:26</small></a>
+                        <a href="https://music.youtube.com/watch?v=sDEKUUxnLac&si=Z5pKhRQS63G3O08F" target="_blank" class="track-item"><span>15. WILSHIRE</span> <small>8:35</small></a>
+                        <a href="https://music.youtube.com/watch?v=VV_4SMGazk0&si=pfn63W-uUf9A1wm4Y" target="_blank" class="track-item"><span>16. SAFARI</span> <small>2:57</small></a>
+
+                        <div class="estate-sale-header text-uppercase">
+                            The Estate Sale (Bonus Tracks)
+                        </div>
+                        <a href="https://music.youtube.com/watch?v=t7hS8FSH-Vs&si=QBiN1-ILBrA9ludg" target="_blank" class="track-item"><span>17. EVERYTHING MUST GO</span> <small>0:28</small></a>
+                        <a href="https://music.youtube.com/watch?v=lgLLWXMTsUA&si=boRjQZ8uQkK1GJPG" target="_blank" class="track-item"><span>18. STUNTMAN</span> <small>3:20</small></a>
+                        <a href="https://music.youtube.com/watch?v=J3olMh9iv0k&si=CznzhKrvQJg2y5UI" target="_blank" class="track-item"><span>19. WHAT A DAY</span> <small>3:37</small></a>
+                        <a href="https://music.youtube.com/watch?v=MZ7okaUoqHs&si=39WDp266zU6vOYJW" target="_blank" class="track-item"><span>20. WHARF TALK</span> <small>3:24</small></a>
+                        <a href="https://music.youtube.com/watch?v=lOuAZ6-2i-s&si=f0hstyhE5G1iFWW6" target="_blank" class="track-item"><span>21. DOGTOOTH</span> <small>2:41</small></a>
+                        <a href="https://music.youtube.com/watch?v=MLnjmwAppxQ&si=9yuV9-d_049-v9iz" target="_blank" class="track-item"><span>22. HEAVEN TO ME</span> <small>3:51</small></a>
+                        <a href="https://music.youtube.com/watch?v=nteYkDKLnps&si=RjDxVGl4LtKt3mxH" target="_blank" class="track-item"><span>23. BOYFRIEND, GIRLFRIEND (2020 Demo)</span> <small>3:24</small></a>
+                        <a href="https://music.youtube.com/watch?v=kh7jlleDZLc&si=NG1CA0k7JcXSc_Yu" target="_blank" class="track-item"><span>24. SORRY NOT SORRY</span> <small>3:26</small></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-5 text-center small opacity-75">
+        <p>&copy; 2026 Columbia Records / Wolf Gang. "I'M ALWAYS LOST."</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

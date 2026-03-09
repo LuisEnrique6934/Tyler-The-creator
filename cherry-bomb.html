@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cherry Bomb - Tyler, The Creator</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        :root {
+            --cherry-yellow: #fff200;
+            --cherry-red: #ff3e3e;
+            --cherry-blue: #00aeef;
+            --cherry-dark: #1a1a1a;
+        }
+
+        body {
+            /* Fondo azul vibrante con patrón de puntos */
+            background-color: var(--cherry-blue);
+            background-image: radial-gradient(rgba(255,255,255,0.3) 2px, transparent 2px);
+            background-size: 30px 30px;
+            color: white;
+            /* Usamos fuentes redondeadas tipo comic/handwritten */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+        }
+
+        /* Navbar estilo Cherry Bomb */
+        .navbar {
+            background-color: var(--cherry-yellow) !important;
+            border-bottom: 8px solid var(--cherry-dark);
+        }
+        
+        .navbar-brand, .nav-link {
+            color: var(--cherry-dark) !important;
+            font-weight: 900 !important;
+            text-transform: uppercase;
+        }
+
+        /* Título con estilo de logo */
+        .album-title {
+            font-size: 4.5rem;
+            font-weight: 900;
+            color: var(--cherry-yellow);
+            text-transform: uppercase;
+            text-shadow: 6px 6px 0px var(--cherry-red), 10px 10px 0px var(--cherry-dark);
+            letter-spacing: -2px;
+            transform: rotate(-2deg);
+            margin-bottom: 2rem;
+        }
+
+        /* Contenedores */
+        section {
+            background: rgba(255, 62, 62, 0.8); /* Rojo Cherry Bomb */
+            border: 6px solid var(--cherry-dark);
+            margin: 20px;
+            border-radius: 20px;
+            box-shadow: 15px 15px 0px var(--cherry-dark);
+        }
+
+        /* Imagen con borde saturado */
+        .album-img {
+            border: 8px solid var(--cherry-yellow);
+            box-shadow: 10px 10px 0px var(--cherry-dark);
+            border-radius: 15px;
+            transition: transform 0.3s;
+        }
+        
+        .album-img:hover {
+            transform: scale(1.05) rotate(2deg);
+        }
+
+        /* Tracklist - Estilo botones de colores */
+        .list-group-item {
+            background-color: var(--cherry-yellow);
+            border: 4px solid var(--cherry-dark);
+            color: var(--cherry-dark);
+            margin-bottom: 10px;
+            border-radius: 12px !important;
+            font-size: 1.2rem;
+            transition: 0.2s;
+        }
+
+        .list-group-item:hover {
+            background-color: white;
+            transform: translateY(-5px);
+            box-shadow: 5px 5px 0px var(--cherry-dark);
+        }
+
+        .btn-cherry {
+            background-color: var(--cherry-blue);
+            color: white;
+            border: 3px solid var(--cherry-dark);
+            border-radius: 10px;
+            font-weight: 900;
+            box-shadow: 3px 3px 0px var(--cherry-dark);
+        }
+
+        .btn-cherry:hover {
+            background-color: #fff;
+            color: var(--cherry-blue);
+        }
+
+        .info-box {
+            background: var(--cherry-dark);
+            color: var(--cherry-yellow);
+            padding: 20px;
+            border-radius: 15px;
+            border: 4px dashed var(--cherry-yellow);
+        }
+
+        footer {
+            background-color: var(--cherry-yellow);
+            color: var(--cherry-dark);
+            font-weight: 900;
+            border-top: 8px solid var(--cherry-dark);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="index.html">CHERRY BOMB.</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">INICIO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#discografia">DISCOGRAFÍA</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-5 mb-4 text-center">
+                    <img src="img/Churbum.webp" alt="Cherry Bomb Album" class="img-fluid album-img">
+                </div>
+                <div class="col-md-7">
+                    <h1 class="album-title">CHERRY BOMB</h1>
+                    
+                    <div class="info-box mt-4">
+                        <p class="h4">Año: 2015</p>
+                        <p class="h4">Género: Hip-Hop Alternativo / Experimental</p>
+                    </div>
+
+                    <p class="mt-4" style="font-size: 1.2rem; text-shadow: 2px 2px var(--cherry-dark);">
+                        El Album mas experimental de Tyler, con una mezcla de sonidos agresivos y melódicos, mostrando su evolución artística y su capacidad para romper moldes en el hip-hop.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-md-10 mx-auto">
+                     <h2 class="mb-4 text-center" style="color: var(--cherry-yellow); text-shadow: 3px 3px var(--cherry-dark); font-size: 3rem;">OFFICIAL TRACKLIST</h2>
+        
+                    <div class="list-group">
+                        <div class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>01. DEATHCAMP (feat. Cole Alexander)</span>
+                            <button onclick="controlarAudio('cherrybomb/DEATHCAMP.mp3', this)" class="btn btn-cherry">PLAY IT!</button>
+                        </div>
+                        <div class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>02. BUFFALO (feat. Shane Powers)</span>
+                            <button onclick="controlarAudio('cherrybomb/BUFFALO.mp3', this)" class="btn btn-cherry">PLAY IT!</button>
+                        </div>
+                        <div class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>03. PILOT (feat. Sydney Bennett)</span>
+                            <button onclick="controlarAudio('cherrybomb/PILOT.mp3', this)" class="btn btn-cherry">PLAY IT!</button>
+                        </div>
+                        <div class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>04. RUN</span>
+                            <button onclick="controlarAudio('cherrybomb/RUN.mp3', this)" class="btn btn-cherry">PLAY IT!</button>
+                        </div>
+                        <div class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>05. FIND YOUR WINGS (feat. Roy Ayers & Kali Uchis)</span>
+                            <button onclick="controlarAudio('cherrybomb/FIND_YOUR_WINGS.mp3', this)" class="btn btn-cherry">PLAY IT!</button>
+                        </div>
+                        <div class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>06. CHERRY BOMB</span>
+                            <button onclick="controlarAudio('cherrybomb/CHERR_BOMB.mp3', this)" class="btn btn-cherry">PLAY IT!</button>
+                        </div>
+                        <div class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>07. BLOW MY LOAD</span>
+                            <button onclick="controlarAudio('cherrybomb/BLOW_MY_LOAD.mp3', this)" class="btn btn-cherry">PLAY IT!</button>
+                        </div>
+                        <div class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>08. 2SEATER</span>
+                            <button onclick="controlarAudio('cherrybomb/2SEATER.mp3', this)" class="btn btn-cherry">PLAY IT!</button>
+                        </div>
+                        <div class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>09. THE BROWN STAINS OF DARKEESE LATIFAH...</span>
+                            <button onclick="controlarAudio('cherrybomb/THE_BROWN_STAINS_OF_DARKEESE_LATIFAH_PART6-12(Remix).mp3', this)" class="btn btn-cherry">PLAY IT!</button>
+                        </div>
+                        <div class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>10. FUCKING YOUNG / PERFECT</span>
+                            <button onclick="controlarAudio('cherrybomb/PARFAIT.mp3', this)" class="btn btn-cherry">PLAY IT!</button>
+                        </div>
+                        <div class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>11. SMUCKERS (feat. Lil Wayne & Kanye West)</span>
+                            <button onclick="controlarAudio('cherrybomb/SMUCKERS.mp3', this)" class="btn btn-cherry">PLAY IT!</button>
+                        </div>
+                        <div class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>12. KEEP DA O'S (feat. Pharrell Williams)</span>
+                            <button onclick="controlarAudio('cherrybomb/KEEP_DA_OS.mp3', this)" class="btn btn-cherry">PLAY IT!</button>
+                        </div>
+                        <div class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>13. OKAGA, CA</span>
+                            <button onclick="controlarAudio('cherrybomb/OKAGA,CA.mp3', this)" class="btn btn-cherry">PLAY IT!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="index.html#discografia" class="btn btn-dark btn-lg px-5 py-3 rounded-pill shadow" style="border: 4px solid var(--cherry-yellow);">
+                    <i class="bi bi-arrow-left-circle-fill"></i> VOLVER ATRÁS
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-5 text-center">
+        <div class="container">
+            <p class="h3 mb-2">GOLF WANG / ODD FUTURE</p>
+            <p class="small">By Luis Enrique Fernández Leyva - 2026</p>
+        </div>
+    </footer>
+
+    <audio id="reproductor"></audio>
+
+    <script>
+        const audio = document.getElementById('reproductor');
+        let btnActivo = null;
+
+        function controlarAudio(ruta, btn) {
+            if (audio.src.includes(ruta)) {
+                if (audio.paused) {
+                    audio.play();
+                    btn.innerHTML = "PAUSE";
+                    btn.style.backgroundColor = "white";
+                    btn.style.color = "black";
+                } else {
+                    audio.pause();
+                    btn.innerHTML = "PLAY IT!";
+                    btn.style.backgroundColor = "";
+                    btn.style.color = "";
+                }
+            } else {
+                if (btnActivo) {
+                    btnActivo.innerHTML = "PLAY IT!";
+                    btnActivo.style.backgroundColor = "";
+                    btnActivo.style.color = "";
+                }
+                audio.src = ruta;
+                audio.play();
+                btnActivo = btn;
+                btn.innerHTML = "PAUSE";
+                btn.style.backgroundColor = "white";
+                btn.style.color = "black";
+            }
+            audio.onended = () => {
+                btn.innerHTML = "PLAY IT!";
+                btn.style.backgroundColor = "";
+                btn.style.color = "";
+            };
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

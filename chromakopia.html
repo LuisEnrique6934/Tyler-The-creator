@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHROMAKOPIA - Local Player</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        :root {
+            --chroma-dark: #1a1c1a;
+            --chroma-green: #3d4a3e;
+            --chroma-bright: #d1d1d1;
+            --chroma-accent: #5e6b5f;
+        }
+
+        body {
+            background-color: var(--chroma-dark);
+            color: var(--chroma-bright);
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .navbar { background-color: #000 !important; border-bottom: 2px solid var(--chroma-green); }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: white;
+            border-left: 8px solid var(--chroma-green);
+            padding-left: 15px;
+        }
+
+        /* Estilo del Accordion */
+        .accordion-item {
+            background-color: #000 !important;
+            border: 1px solid var(--chroma-green) !important;
+            margin-bottom: 5px;
+        }
+
+        .accordion-button {
+            background-color: #000 !important;
+            color: var(--chroma-bright) !important;
+            font-family: 'Courier New', monospace;
+            text-transform: uppercase;
+            box-shadow: none !important;
+        }
+
+        .accordion-button:not(.collapsed) {
+            color: white !important;
+            background-color: var(--chroma-green) !important;
+        }
+
+        .accordion-button::after { filter: invert(1); }
+
+        .track-num {
+            color: var(--chroma-accent);
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        .album-card-secret {
+            border: 1px solid var(--chroma-green);
+            padding: 15px;
+            background: rgba(61, 74, 62, 0.05);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-md sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand text-white fw-bold" href="index.html">CHROMAKOPIA</a>
+        </div>
+    </nav>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="album-card-secret">
+                        <img src="img/Chromakopia-Album-Art-with-photo-full.jpg" class="img-fluid mb-3 grayscale">
+                        <p class="small text-uppercase mb-1">Año: 2024</p>
+                        <p class="small text-uppercase mb-0 text-success">Genero: Hip Hop, R&B, neo soul</p>
+                        <p class="small text-uppercase mb-1">Por lejos el album mas personal de tyler, hablando de sus problemas con la fama, el como no puede estar con una sola pareja
+                            ,acerca de como a envejecido, y el un problema que arrastra con su padre, el album es un viaje emocional.
+                        </p>
+                    </div>
+                    <a href="index.html#discografia" class="btn btn-outline-light w-100 mt-3 rounded-0">REGRESAR</a>
+                </div>
+
+                <div class="col-md-8">
+                    <h1 class="section-title mb-4">Transmission_Tracks</h1>
+                    
+                    <div class="accordion" id="chromaAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#t1"><span class="track-num">01</span> St. Chroma</button></h2>
+                            <div id="t1" class="accordion-collapse collapse" data-bs-parent="#chromaAccordion"><div class="accordion-body"><button class="btn btn-outline-light play-btn" data-src="Chromakopia/St. Chroma.mp3"><i class="bi bi-play-fill"></i> Play</button></div></div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#t2"><span class="track-num">02</span> Rah Tah Tah</button></h2>
+                            <div id="t2" class="accordion-collapse collapse" data-bs-parent="#chromaAccordion"><div class="accordion-body"><button class="btn btn-outline-light play-btn" data-src="Chromakopia/Rah Tah Tah.mp3"><i class="bi bi-play-fill"></i> Play</button></div></div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#t3"><span class="track-num">03</span> Noid</button></h2>
+                            <div id="t3" class="accordion-collapse collapse" data-bs-parent="#chromaAccordion"><div class="accordion-body"><button class="btn btn-outline-light play-btn" data-src="Chromakopia/Noid.mp3"><i class="bi bi-play-fill"></i> Play</button></div></div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#t4"><span class="track-num">04</span> Darling, I</button></h2>
+                            <div id="t4" class="accordion-collapse collapse" data-bs-parent="#chromaAccordion"><div class="accordion-body"><button class="btn btn-outline-light play-btn" data-src="Chromakopia/Darling, I.mp3"><i class="bi bi-play-fill"></i> Play</button></div></div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#t5"><span class="track-num">05</span> Hey Jane</button></h2>
+                            <div id="t5" class="accordion-collapse collapse" data-bs-parent="#chromaAccordion"><div class="accordion-body"><button class="btn btn-outline-light play-btn" data-src="Chromakopia/Hey Jane.mp3"><i class="bi bi-play-fill"></i> Play</button></div></div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#t6"><span class="track-num">06</span> I Killed You</button></h2>
+                            <div id="t6" class="accordion-collapse collapse" data-bs-parent="#chromaAccordion"><div class="accordion-body"><button class="btn btn-outline-light play-btn" data-src="Chromakopia/I Killed You.mp3"><i class="bi bi-play-fill"></i> Play</button></div></div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#t7"><span class="track-num">07</span> Judge Judy</button></h2>
+                            <div id="t7" class="accordion-collapse collapse" data-bs-parent="#chromaAccordion"><div class="accordion-body"><button class="btn btn-outline-light play-btn" data-src="Chromakopia/Judge Judy.mp3"><i class="bi bi-play-fill"></i> Play</button></div></div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#t8"><span class="track-num">08</span> Sticky</button></h2>
+                            <div id="t8" class="accordion-collapse collapse" data-bs-parent="#chromaAccordion"><div class="accordion-body"><button class="btn btn-outline-light play-btn" data-src="Chromakopia/Sticky.mp3"><i class="bi bi-play-fill"></i> Play</button></div></div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#t9"><span class="track-num">09</span> Take Your Mask Off</button></h2>
+                            <div id="t9" class="accordion-collapse collapse" data-bs-parent="#chromaAccordion"><div class="accordion-body"><button class="btn btn-outline-light play-btn" data-src="Chromakopia/Take Your Mask Off.mp3"><i class="bi bi-play-fill"></i> Play</button></div></div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#t10"><span class="track-num">10</span> Tomorrow</button></h2>
+                            <div id="t10" class="accordion-collapse collapse" data-bs-parent="#chromaAccordion"><div class="accordion-body"><button class="btn btn-outline-light play-btn" data-src="Chromakopia/Tomorrow.mp3"><i class="bi bi-play-fill"></i> Play</button></div></div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#t11"><span class="track-num">11</span> Thought I Was Dead</button></h2>
+                            <div id="t11" class="accordion-collapse collapse" data-bs-parent="#chromaAccordion"><div class="accordion-body"><button class="btn btn-outline-light play-btn" data-src="Chromakopia/Thought I Was Dead.mp3"><i class="bi bi-play-fill"></i> Play</button></div></div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#t12"><span class="track-num">12</span> Like Him</button></h2>
+                            <div id="t12" class="accordion-collapse collapse" data-bs-parent="#chromaAccordion"><div class="accordion-body"><button class="btn btn-outline-light play-btn" data-src="Chromakopia/Like Him.mp3"><i class="bi bi-play-fill"></i> Play</button></div></div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#t13"><span class="track-num">13</span> Balloon</button></h2>
+                            <div id="t13" class="accordion-collapse collapse" data-bs-parent="#chromaAccordion"><div class="accordion-body"><button class="btn btn-outline-light play-btn" data-src="Chromakopia/Balloon.mp3"><i class="bi bi-play-fill"></i> Play</button></div></div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#t14"><span class="track-num">14</span> I Hope You Find Your Way Home</button></h2>
+                            <div id="t14" class="accordion-collapse collapse" data-bs-parent="#chromaAccordion"><div class="accordion-body"><button class="btn btn-outline-light play-btn" data-src="Chromakopia/I Hope You Find Your Way Home.mp3"><i class="bi bi-play-fill"></i> Play</button></div></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Lógica de Audio con JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            const playButtons = document.querySelectorAll('.play-btn');
+            const accordionElements = document.querySelectorAll('.accordion-collapse');
+            let currentAudio = null;
+            let currentButton = null;
+
+            playButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const src = this.getAttribute('data-src');
+                    if (currentAudio && currentAudio.src !== src) {
+                        currentAudio.pause();
+                        if (currentButton) {
+                            currentButton.innerHTML = '<i class="bi bi-play-fill"></i> Play';
+                            currentButton.classList.remove('btn-success');
+                            currentButton.classList.add('btn-outline-light');
+                        }
+                    }
+                    if (!currentAudio || currentAudio.src !== src) {
+                        currentAudio = new Audio(src);
+                        currentButton = this;
+                        currentAudio.play();
+                        this.innerHTML = '<i class="bi bi-pause-fill"></i> Pause';
+                        this.classList.remove('btn-outline-light');
+                        this.classList.add('btn-success');
+                    } else {
+                        if (currentAudio.paused) {
+                            currentAudio.play();
+                            this.innerHTML = '<i class="bi bi-pause-fill"></i> Pause';
+                            this.classList.remove('btn-outline-light');
+                            this.classList.add('btn-success');
+                        } else {
+                            currentAudio.pause();
+                            this.innerHTML = '<i class="bi bi-play-fill"></i> Play';
+                            this.classList.remove('btn-success');
+                            this.classList.add('btn-outline-light');
+                        }
+                    }
+                });
+            });
+
+            // Pausar música automáticamente si se cierra el acordeón
+            accordionElements.forEach(acc => {
+                acc.addEventListener('hide.bs.collapse', function () {
+                    const buttonInAcc = acc.querySelector('.play-btn');
+                    if (buttonInAcc && currentButton === buttonInAcc) {
+                        currentAudio.pause();
+                        currentButton.innerHTML = '<i class="bi bi-play-fill"></i> Play';
+                        currentButton.classList.remove('btn-success');
+                        currentButton.classList.add('btn-outline-light');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

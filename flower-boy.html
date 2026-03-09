@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Boy - Tyler, The Creator</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        /* fondo con la portada del álbum para esta página */
+        body {
+            background: url('img/Flower-Boy-de-Tyler-the-Creator.webp') center/cover fixed no-repeat;
+            color: var(--text-dark);
+        }
+        /* asegurar legibilidad poniendo overlay sobre el contenido */
+        section, footer, nav {
+            background: rgba(255,255,255,0.85);
+        }
+
+        /* Estilos personalizados para el acordeón */
+        .accordion-item {
+            border: none;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+        .accordion-button {
+            padding: 1rem 0.5rem;
+        }
+        .accordion-button:not(.collapsed) {
+            background-color: transparent;
+            color: #e67e22; /* Color temático naranja/abeja */
+            box-shadow: none;
+        }
+        .accordion-button:focus {
+            box-shadow: none;
+        }
+        .btn-play {
+            background-color: #fbbf24;
+            border: none;
+            color: #000;
+            transition: 0.3s;
+        }
+        .btn-play:hover {
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="index.html">Tyler.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#discografia">Discografía</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-start">
+                <div class="col-md-4 mb-4 sticky-md-top" style="top: 100px;">
+                    <img src="img/Flower-Boy-de-Tyler-the-Creator.webp" alt="Flower Boy Album" class="img-fluid rounded" style="box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                    <div class="album-card-large mt-3">
+                        <h2>Flower Boy</h2>
+                        <p class="album-year text-muted">2017</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-8">
+                    <h1 class="section-title">Flower Boy</h1>
+                    <p><strong>Año de lanzamiento:</strong> 2017</p>
+                    <p><strong>Tipo:</strong> Álbum de estudio</p>
+                    <p class="mt-4">Flower Boy es el quinto álbum de estudio de Tyler, The Creator. Este álbum marca un cambio significativo en su sonido, presentando una paleta musical más variada y sofisticada.</p>
+                    
+                    <h3 class="mt-5 mb-4">Tracklist</h3>
+                    
+                    <div class="accordion accordion-flush" id="tracklistAccordion">
+                        
+                        <div class="accordion-item bg-transparent">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                                    01. Foreword
+                                </button>
+                            </h2>
+                            <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#tracklistAccordion">
+                                <div class="accordion-body">
+                                    <p class="small text-muted">La palabra Foreword signifa como palabras previas funciona como una introduccion al album haciendo preguntas como "How many raps can i write til I get my a chain" o "And if i drown, who is gonna know?" hablando del exito musical o su propia soledad temas recurrentes a lo largo del album</p>
+                                    <button class="btn btn-sm btn-play rounded-pill px-3"><i class="bi bi-play-fill"></i> Reproducir</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-transparent">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                                    02. Where This Flower Blooms
+                                </button>
+                            </h2>
+                            <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#tracklistAccordion">
+                                <div class="accordion-body">
+                                    <p class="small text-muted">Una canción introspectiva junto a su compañero/amigo del colectivo de OddFuture Frank Ocean, habla acerca de su crecimiento personal y artistico haciendo una metafora de florecer como una flor.</p>
+                                    <button class="btn btn-sm btn-play rounded-pill px-3"><i class="bi bi-play-fill"></i> Reproducir</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-transparent">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+                                    03. Sometimes... (Interlude)
+                                </button>
+                            </h2>
+                            <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#tracklistAccordion">
+                                <div class="accordion-body">
+                                    <p class="small text-muted">Esta cancion es un pequeño interludio, como una introduccion de la siguiente canción </p>
+                                    <button class="btn btn-sm btn-play rounded-pill px-3"><i class="bi bi-play-fill"></i> Reproducir</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-transparent">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+                                    03. See You Again
+                                </button>
+                            </h2>
+                            <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#tracklistAccordion">
+                                <div class="accordion-body">
+                                    <p class="small text-muted">El éxito romántico del álbum. Una melodía soñadora sobre alguien que solo existe en la imaginación.</p>
+                                    <button class="btn btn-sm btn-play rounded-pill px-3"><i class="bi bi-play-fill"></i> Reproducir</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-transparent">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5">
+                                    04. Who Dat Boy
+                                </button>
+                            </h2>
+                            <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#tracklistAccordion">
+                                <div class="accordion-body">
+                                    <p class="small text-muted">Un track agresivo y lleno de energía con A$AP Rocky que rompe con la suavidad del álbum.</p>
+                                    <button class="btn btn-sm btn-play rounded-pill px-3"><i class="bi bi-play-fill"></i> Reproducir</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-transparent">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6">
+                                    05. Pothole
+                                </button>
+                            </h2>
+                            <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#tracklistAccordion">
+                                <div class="accordion-body">
+                                    <p class="small text-muted">Una canción más introspectiva, hablando de avanzar y superar dificultades, haciendo referencia a estas en forma de baches que uno puede encontrar mientas maneja(vives tu vida).</p>
+                                    <button class="btn btn-sm btn-play rounded-pill px-3"><i class="bi bi-play-fill"></i> Reproducir</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-transparent">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7">
+                                    06. Garden Shed
+                                </button>
+                            </h2>
+                            <div id="collapse7" class="accordion-collapse collapse" data-bs-parent="#tracklistAccordion">
+                                <div class="accordion-body">
+                                    <p class="small text-muted">Mi cancion favorita del album, Garden Shed habla acerca de la represion y guardarse sentimientos estos guardados en un cobertizo tyler lo usa para hablar de su sexualidad yo en cambio para la represion de ideas, gustos o sentimientos.</p>
+                                    <button class="btn btn-sm btn-play rounded-pill px-3"><i class="bi bi-play-fill"></i> Reproducir</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-transparent">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8">
+                                    07. Boredom
+                                </button>
+                            </h2>
+                            <div id="collapse8" class="accordion-collapse collapse" data-bs-parent="#tracklistAccordion">
+                                <div class="accordion-body">
+                                    <p class="small text-muted">Una canción sobre la soledad y el aburrimiento, con un ritmo relajado y atrapante con los vocales de Anna of the north</p>
+                                    <button class="btn btn-sm btn-play rounded-pill px-3"><i class="bi bi-play-fill"></i> Reproducir</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-transparent">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9">
+                                    08. I Ain't Got Time!
+                                </button>
+                            </h2>
+                            <div id="collapse9" class="accordion-collapse collapse" data-bs-parent="#tracklistAccordion">
+                                <div class="accordion-body">
+                                    <p class="small text-muted">Tyler aborda temas que van desde su rechazo hacia las personas que solo se interesan en él por su éxito, hasta el asombro por lo que ha logrado y su anhelo por conseguir más.
+                                        En la canción anterior, el estribillo repite 'find some time' (encuentra algo de tiempo), por lo que esta canción funciona como un contraste al estado mental aburrido de Tyler mediante un cambio en las letras y un tempo más acelerado.</p>
+                                    <button class="btn btn-sm btn-play rounded-pill px-3"><i class="bi bi-play-fill"></i> Reproducir</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-transparent">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10">
+                                    09. 911 / Mr. Lonely
+                                </button>
+                            </h2>
+                            <div id="collapse10" class="accordion-collapse collapse" data-bs-parent="#tracklistAccordion">
+                                <div class="accordion-body">
+                                    <p class="small text-muted">Continua con la tradicion de canciones divididas en dos partes 911 habla de soledad y que alguien lo llame usa el numero 911 porque es el numero de emergencia dejando implicito que el esta disponible en cualquier momento en que le necesiten,
+                                        por otro lado Mr. Lonely con un ritmo mas animado continua con la lirica de soledad hablando que apesar de todo el dinero, fama y exito que a conseguido no puede encontrar alguien que lo acompañe rellenado ese vacio con objetos materiales.</p>
+                                    <button class="btn btn-sm btn-play rounded-pill px-3"><i class="bi bi-play-fill"></i> Reproducir</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-transparent">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11">
+                                    10. November
+                                </button>
+                            </h2>
+                            <div id="collapse11" class="accordion-collapse collapse" data-bs-parent="#tracklistAccordion">
+                                <div class="accordion-body">
+                                    <p class="small text-muted">Una cancion que habla acerca de volver a un momento tyler en cierta parte de la cancio hace que los colaboradores se integren a la cancion acerca de los tiempos a los que quisieran volver.</p>
+                                    <button class="btn btn-sm btn-play rounded-pill px-3"><i class="bi bi-play-fill"></i> Reproducir</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-transparent">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse12">
+                                    11. Glitter
+                                </button>
+                            </h2>
+                            <div id="collapse12" class="accordion-collapse collapse" data-bs-parent="#tracklistAccordion">
+                                <div class="accordion-body">
+                                    <p class="small text-muted">Una cancion de amor hablando acerca de esa persona que nos hace sentir chispas o brillos, hasta que a la mitad de la cancion se corta el ritmo dejando implicito que es un mensaje de voz no pudo comunicar sus sentimientos dejandolos en el aire.</p>
+                                    <button class="btn btn-sm btn-play rounded-pill px-3"><i class="bi bi-play-fill"></i> Reproducir</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-transparent">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse13">
+                                    12. Enjoy Right Now, Today
+                                </button>
+                            </h2>
+                            <div id="collapse13" class="accordion-collapse collapse" data-bs-parent="#tracklistAccordion">
+                                <div class="accordion-body">
+                                    <p class="small text-muted">Una cancion sin lirica solo instrumentales para que disfrutes ahora mismo hoy.</p>
+                                    <button class="btn btn-sm btn-play rounded-pill px-3" ><i class="bi bi-play-fill"></i> Reproducir</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    <div class="mt-5">
+                        <a href="index.html#discografia" class="btn btn-primary">Volver a Discografía</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-4">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2026 Tyler, The Creator. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Audio Player -->
+    <audio id="audioPlayer" preload="none"></audio>
+    
+    <script>
+        // Mapa de tracks a archivos de audio
+        const trackFiles = {
+            'collapse1': 'SFFB/Foreword.MP3',
+            'collapse2': 'SFFB/Where This Flower Blooms.MP3',
+            'collapse3': 'SFFB/Sometimes.MP3',
+            'collapse4': 'SFFB/See You Again.MP3',
+            'collapse5': 'SFFB/Who Dat Boy.MP3',
+            'collapse6': 'SFFB/Pothole.MP3',
+            'collapse7': 'SFFB/Garden Shed.MP3',
+            'collapse8': 'SFFB/Boredom.MP3',
+            'collapse9': 'SFFB/I Ain\'t Got Time!.MP3',
+            'collapse10': 'SFFB/911  Mr. Lonely.MP3',
+            'collapse11': 'SFFB/November.MP3',
+            'collapse12': 'SFFB/Glitter.MP3',
+            'collapse13': 'SFFB/Enjoy Right Now, Today.MP3'
+        };
+
+        // Función para reproducir/pausar audio
+        function playTrack(trackId) {
+            const audio = document.getElementById('audioPlayer');
+            const currentSrc = audio.src.split('/').pop();
+            const newSrc = trackFiles[trackId];
+            
+            if (audio.src.includes(newSrc)) {
+                // Si es la misma canción, pausar/reproducir
+                if (audio.paused) {
+                    audio.play();
+                } else {
+                    audio.pause();
+                }
+            } else {
+                // Cambiar a nueva canción
+                audio.src = newSrc;
+                audio.play();
+            }
+        }
+
+        // Agregar event listeners a los botones de reproducción
+        document.addEventListener('DOMContentLoaded', function() {
+            const playButtons = document.querySelectorAll('.btn-play');
+            
+            playButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const accordionItem = this.closest('.accordion-item');
+                    const collapseId = accordionItem.querySelector('.accordion-button').getAttribute('data-bs-target').substring(1);
+                    playTrack(collapseId);
+                    
+                    // Cambiar icono del botón
+                    const icon = this.querySelector('i');
+                    if (document.getElementById('audioPlayer').paused) {
+                        icon.className = 'bi bi-play-fill';
+                    } else {
+                        icon.className = 'bi bi-pause-fill';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
